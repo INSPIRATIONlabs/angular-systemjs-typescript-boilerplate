@@ -1,0 +1,11 @@
+@import "./assets/scss/variables.scss";
+
+@import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+
+@import "./src/app/app.scss";
+
+@include font-face("Roboto", "assets/fonts/Roboto/Roboto-regular", 400);
+@include font-face("Roboto", "assets/fonts/Roboto-500/Roboto-500", 500);
+@include font-face("Roboto", "assets/fonts/Roboto-700/Roboto-700", 700);
+
+@include font-face("Material Icons", "assets/fonts/MaterialIcons/MaterialIcons-Regular", 400);

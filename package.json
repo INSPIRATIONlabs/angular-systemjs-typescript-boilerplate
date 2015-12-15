@@ -1,0 +1,80 @@
+{
+  "dependencies": {
+    "gulp-sass": "^2.0.4",
+    "gulp-systemjs-resolver": "0.0.6"
+  },
+  "devDependencies": {
+    "babel": "^5.8.33",
+    "bourbon": "^4.2.5",
+    "gulp": "^3.8.11",
+    "gulp-angular-gettext": "^2.1.0",
+    "gulp-helpers": "^3.0.5",
+    "gulp-debug": "^2.1.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.10.0",
+    "gulp-uglify": "^1.2.0",
+    "jspm": "^0.16.0",
+    "merge2": "^0.3.6",
+    "protractor": "^2.0.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "dist",
+      "lib": "src",
+      "packages": "jspm_packages"
+    },
+    "configFile": "system.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@1.4.7",
+      "jquery": "github:components/jquery@2",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "oclazyload": "github:ocombe/ocLazyLoad@1.0.0-alpha2",
+      "oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.2.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.33",
+      "babel-runtime": "npm:babel-runtime@^5.8.29",
+      "core-js": "npm:core-js@^1.2.5",
+      "traceur": "github:jmcriffey/bower-traceur@0.0.92",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92"
+    },
+    "overrides": {
+      "github:christopherthielen/ui-router-extras@0.0.13": {
+        "shim": {
+          "release/modular/ct-ui-router-extras.core": {
+            "deps": [
+              "angular"
+            ]
+          },
+          "release/modular/ct-ui-router-extras.future": {
+            "deps": [
+              "angular"
+            ]
+          }
+        },
+        "dependencies": {
+          "angular": "jspm:angular@^1.4"
+        }
+      },
+      "github:ocombe/ocLazyLoad@1.0.0-alpha2": {
+        "shim": {
+          "dist/ocLazyLoad": {
+            "deps": [
+              "angular"
+            ]
+          }
+        },
+        "dependencies": {
+          "angular": "jspm:angular@^1.4"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "jspm install",
+    "test": "gulp recompile && ./node_modules/gulp-helpers/node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
+    "protractor-setup": "./node_modules/.bin/webdriver-manager update --standalone",
+    "protractor-run": "gulp babel-e2e && ./node_modules/.bin/protractor protractor.conf.js"
+  }
+}
