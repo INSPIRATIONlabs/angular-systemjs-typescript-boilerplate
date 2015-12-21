@@ -19,21 +19,10 @@
         "./src/app/home/home.ts",
         "./src/app/home/homeModule.d.ts",
         "./src/app/home/homeModule.ts",
-        "./typings/angular-hotkeys/angular-hotkeys.d.ts",
-        "./typings/angular-moment/angular-moment.d.ts",
-        "./typings/angular-numeral/angular-numeral.d.ts",
         "./typings/angularjs/angular-resource.d.ts",
         "./typings/angularjs/angular-sanitize.d.ts",
         "./typings/angularjs/angular.d.ts",
-        "./typings/async/async.d.ts",
-        "./typings/bowser/bowser.d.ts",
-        "./typings/chroma/chroma.d.ts",
-        "./typings/highcharts-ng/highcharts-ng.d.ts",
         "./typings/jquery/jquery.d.ts",
-        "./typings/lodash/lodash.d.ts",
-        "./typings/moment/moment-node.d.ts",
-        "./typings/moment/moment.d.ts",
-        "./typings/numeraljs/numeraljs.d.ts",
         "./typings/oclazyload-systemjs-router/oclazyload-systemjs-router.d.ts"
     ]
 }
